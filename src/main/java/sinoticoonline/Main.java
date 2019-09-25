@@ -32,7 +32,8 @@ public class Main {
         veiculoEmTrajeto3.iniciarViagem();
         veiculoEmTrajeto4.iniciarViagem();
         veiculoEmTrajeto5.iniciarViagem();*/
-        veiculoEmTrajeto6.iniciarViagem(); //87594
+        veiculoEmTrajeto2.iniciarViagem(); //87594
+
 
         //dp
 

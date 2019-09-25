@@ -81,25 +81,31 @@ public class VeiculoEmTrajeto {
 
             System.out.println("transmissao "+dataTransmissao+" percentual "+percentualDeConclusao);
 
-            Double minutos = copiloto
-                                .emViagemComVeiculo(veiculo.getId())
-                                .comModulo()
-                                .modelo(veiculo.getModeloModulo())
-                                .identificador(veiculo.getIdentificadorModulo())
-                                .doCliente(veiculo.getClienteId())
-                                .naLinha(trajeto.getLinhaId())
-                                .noTrajeto(trajeto.getTrajetoId())
-                                .comPercentualDeConclusao(percentualDeConclusao)
-                                .transmitiuEm(dataTransmissao)
-                                .calcular()
-                                .regulagem();
+            try{
+                Double minutos = copiloto
+                        .emViagemComVeiculo(veiculo.getId())
+                        .comModulo()
+                        .modelo(veiculo.getModeloModulo())
+                        .identificador(veiculo.getIdentificadorModulo())
+                        .doCliente(veiculo.getClienteId())
+                        .naLinha(trajeto.getLinhaId())
+                        .noTrajeto(trajeto.getTrajetoId())
+                        .comPercentualDeConclusao(percentualDeConclusao)
+                        .transmitiuEm(dataTransmissao)
+                        .calcular()
+                        .regulagem();
 
-            System.out.println("retornando "+new Date());
+                System.out.println("retornando "+new Date());
 
-            System.out.println(minutos+" ---- "+" veiculo: "+veiculo.getId());
+                System.out.println(minutos+" ---- "+" veiculo: "+veiculo.getId());
 
-            if(minutos != null)
-                minutosRegulados = minutos;
+                if(minutos != null)
+                    minutosRegulados = minutos;
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+
         }
 
         private void chamarCopilotoDistanciaMinima(long tempo){

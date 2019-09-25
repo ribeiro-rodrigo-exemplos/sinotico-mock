@@ -8,7 +8,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args){
 
-        Copiloto copiloto = CopilotoBuilder.build("localhost",6565);
+        /*Copiloto copiloto = CopilotoBuilder.build("localhost",6565);
 
         Double minutos = copiloto
                                 .emViagem("aaaa")
@@ -24,6 +24,6 @@ public class Main {
                                     .calcular()
                                         .regulagem();
 
-        System.out.println(minutos+" ---- ");
+        System.out.println(minutos+" ---- "); */
     }
 }
